@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="beterFunction()"/>
+    <script src="./index.js" ></script>
+    <button id="btn-0">Button 1</button> <button id="btn-1">Button 2</button> <button id="btn-2">Button 3</button>
+    <script>
+    const prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+for (var btnNum = 0; btnNum < prizes.length; btnNum++) {
+    // For each of our buttons, when the user clicks it...
+     document.getElementById(`btn-${btnNum}`).onclick = () => {
+    // Tell her what she's won!
+     alert(prizes[btnNum]);
+    };
+    
+    /*
+1. Problem is that we are declaring btnNum using var ,due to this we are getting btnNum undefined when we are trying to click
+2. if you want to work with this properly in place of 'var' use 'let' 
+   because due the scopes are different for let and var
+
+
+
+    */
+}
+    
+    </script>
+</body>
+</html>
